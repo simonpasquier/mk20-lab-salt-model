@@ -9,6 +9,13 @@ parameters:
           full_name: Ales Komarek
           home: /home/newt
           email: mail@newt.cz
+        spasquier:
+          enabled: true
+          name: spasquier
+          sudo: true
+          full_name: Simon Pasquier
+          home: /home/spasquier
+          email: spasquier@mirantis.com
   openssh:
     client:
       enabled: true
@@ -20,6 +27,13 @@ parameters:
           public_keys:
           - ${public_keys:newt}
           user: ${linux:system:user:newt}
+        spasquier:
+          enabled: true
+          public_keys:
+          - ${public_keys:spasquier}
+          user: ${linux:system:user:spasquier}
   public_keys:
     newt:
       key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3odU+3V2uDA2ptAFL9hrJRPNEEdAyztWOZFQ5Oyd9oerTGOU3p4xmrgWWjfKFKbYGhiiIUcYAol5PkTfKukGEkkjCHYA1t023soCaaAj85wCZCnw2zQNAziwxTYmAzTqgxiSvtZNMMrtJvFHRIRDzJ3M1lV0prWNWkMM1/3FAd4W49y6VT3fkMCo8uqG7CfGdgR2DgBCxf9KaNPfW5eDEPOgmE5lK8tVSEI6T+Cg7hbcTf4lFYnlFBnlQgp/0JstsM4Vbwb4B34LOpOsf2S8rrWk2xQMjwaMHXkc2s/E8iW3F5nVFuyEXYISFQIiAHw8dzC6CHgLcyHUVWwznKawZ newt@newt-dev1
+    spasquier:
+      key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXBHKQaGUNB92DsnyvflmCbmuXnkiuNahZiue3hnyXqLA2q8jmQmzBbxReAJzexnVfJhrUCTw8IPJUpMUP27u3igvGdkhfctdUuxVf9yGJErtGNgHK/aGbeLCvUOmhw6X/xbf3IbyFL1gwxOJ2cmmjlSptYU9E1W2xFY+IMFWBhzO3vso5EABgPVli/UUMfeXUUd++lIZpoyYe2Hkri1QGNhzfbZcFjEO78+vNiLZrvjJEtkXWu7iZTYK6eE365CiFJzqFL7N6Ichb28qakcmVqR/foreuz3cOMqMGssKoOQk1213x8w4fE0yLwf9Ft8L7GMf+vXQvuNt0ZKBPWqn7 spasquier@mirantis.com
